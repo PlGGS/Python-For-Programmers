@@ -39,3 +39,18 @@ def inversions(upperList):
         if (itemA != itemB):
                 amt += 1
     return int(amt/2)
+
+def subList(list1, list2):
+    '''Returns true if all values of the first list are also found consequtively within the second'''
+    tmpIndex = 0
+    
+    for i in range(len(list1)):
+        if (list1[i] in list2):
+            if (i != len(list1) - 1):
+                tmpIndex = list(list2).index(list1[i]) + 1
+                list2 = list2[tmpIndex:len(list2)]
+                tmpIndex = 0
+        else:
+            return False
+
+    return True
