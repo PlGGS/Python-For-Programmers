@@ -19,6 +19,15 @@ def pay(hourlyWage, lastWeekHours):
         
     return income
 
+def lastFirst(fullNamesList):
+    outputLists = [[],[]]
+
+    for i in range(len(fullNamesList)):
+        outputLists[0].append(str(fullNamesList[i]).split(", ")[0])
+        outputLists[1].append(str(fullNamesList[i]).split(", ")[1])
+
+    return outputLists
+
 def inversions(upperList):
     '''Returns the number of inversions in a sequence'''
     amt = 0
