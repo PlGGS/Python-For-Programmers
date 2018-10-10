@@ -28,7 +28,27 @@ def lastFirst(fullNamesList):
 
     return outputLists
 
-def inversions(upperList):
+def inversions(pUpperList):
+    '''Returns the number of inversions in a sequence'''
+    tmpSpot = 1
+    amt = 0
+    upperList = list(pUpperList)
+    sortedList = sorted(upperList)
+
+    while upperList != sortedList:
+        if (tmpSpot < len(upperList)):
+            if (upperList[tmpSpot] < upperList[tmpSpot - 1]):
+                amt += 1
+                tmpVal = upperList[tmpSpot - 1]
+                upperList[tmpSpot - 1] = upperList[tmpSpot]
+                upperList[tmpSpot] = tmpVal    
+            tmpSpot += 1
+        else:
+            tmpSpot = 1
+    
+    return amt
+
+def inversions2(upperList):
     '''Returns the number of inversions in a sequence'''
     amt = 0
     sortedList = sorted(upperList)
@@ -38,7 +58,7 @@ def inversions(upperList):
         itemB = sortedList[i]
         if (itemA != itemB):
                 amt += 1
-    return int(amt/2)
+    return int(amt / 2)
 
 def subList(list1, list2):
     '''Returns true if all values of the first list are also found consequtively within the second'''
