@@ -48,18 +48,6 @@ def inversions(pUpperList):
     
     return amt
 
-def inversions2(upperList):
-    '''Returns the number of inversions in a sequence'''
-    amt = 0
-    sortedList = sorted(upperList)
-
-    for i in range(len(upperList)):
-        itemA = upperList[i]
-        itemB = sortedList[i]
-        if (itemA != itemB):
-                amt += 1
-    return int(amt / 2)
-
 def subList(list1, list2):
     '''Returns true if all values of the first list are also found consequtively within the second'''
     tmpIndex = 0
