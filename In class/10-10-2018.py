@@ -3,7 +3,7 @@ def digitsToStrings(listOfDigits):
     result = []
 
     for i in range(len(listOfDigits)):
-        result.append(listOfStrings[listOfDdigitsToStrings[i]])
+        result.append(listOfStrings[listOfDigits[i]])
 
     return result
 
