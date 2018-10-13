@@ -25,3 +25,13 @@ def reverse(phonebook):
     
     return outputDict
 
+def different(table):
+    amtList = []
+
+    for i in range(len(table)):
+        for o in range(len(table[i])):
+            if not(table[i][o] in amtList):
+                amtList.append(table[i][o])
+
+    return len(amtList)
+
