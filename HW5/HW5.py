@@ -7,4 +7,13 @@ def letter2number(gradeLetter):
               "F+":0.3, "F":0.0}
 
     return grades[gradeLetter]
-            
+
+agencies = {"CCC":"Civilian Conservation Corps", 
+            "FCC":"Federal Communications Commission", 
+            "FDIC":"Federal Deposit Insurance Corporation", 
+            "SSB":"Social Security Board", 
+            "WPA":"Works Progress Administration"}
+#TODO add "SEC":"Securities and Exchange Commission"
+#     set SSB value to "Social Security Administration"
+#     remove CCC and WPA
+
