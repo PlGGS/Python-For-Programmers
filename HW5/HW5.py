@@ -35,3 +35,22 @@ def different(table):
 
     return len(amtList)
 
+def index(file, wordList):
+    wordDict = {}
+    linesList = []
+
+    for i in range(len(wordList)):
+        wordDict.update({wordList[i]:[]})
+    
+    reader = open(file, 'r')
+    linesList = reader.readlines()
+    reader.close()
+
+    for i in range(len(linesList)):
+        linesList[i] = linesList[i].lower()
+        for word in wordList:
+            if (word in linesList[i]):
+                wordDict[word].append(i + 1)
+    
+    for word in wordList:
+        print(word + " " + str(wordDict[word]))
