@@ -17,3 +17,11 @@ agencies = {"CCC":"Civilian Conservation Corps",
 #     set SSB value to "Social Security Administration"
 #     remove CCC and WPA
 
+def reverse(phonebook):
+    outputDict = {}
+
+    for i in range(len(phonebook)):
+        outputDict.update({list(reversed(list(phonebook.keys())))[i]:list(reversed(list(phonebook.values())))[i]})
+    
+    return outputDict
+
