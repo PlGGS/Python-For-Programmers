@@ -49,6 +49,7 @@ def index(file, wordList):
     for i in range(len(linesList)):
         linesList[i] = linesList[i].lower()
         for word in wordList:
+            word = word.lower()
             if (word in linesList[i]):
                 wordDict[word].append(i + 1)
     
