@@ -1,4 +1,5 @@
 def letter2number(gradeLetter):
+    '''Returns a grade letter's associated number on a 4.0 scale'''
     gradeLetter = gradeLetter.upper()
     grades = {"A+":4.3, "A":4.0, "A-":3.7, 
               "B+":3.3, "B":3.0, "B-":2.7, 
@@ -18,6 +19,7 @@ agencies = {"CCC":"Civilian Conservation Corps",
 #     remove CCC and WPA
 
 def reverse(phonebook):
+    '''Returns a phonebook's contents in the opposite order of the original'''
     outputDict = {}
 
     for i in range(len(phonebook)):
@@ -26,6 +28,7 @@ def reverse(phonebook):
     return outputDict
 
 def different(table):
+    '''Returns the amount of different values in a table'''
     amtList = []
 
     for i in range(len(table)):
@@ -36,6 +39,7 @@ def different(table):
     return len(amtList)
 
 def index(file, wordList):
+    '''Prints the amount of times words in a word list appear in a file'''
     wordDict = {}
     linesList = []
 
