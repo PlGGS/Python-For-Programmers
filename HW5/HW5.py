@@ -52,10 +52,12 @@ def index(file, wordList):
 
     for i in range(len(linesList)):
         linesList[i] = linesList[i].lower()
-        for word in wordList:
-            word = word.lower()
-            if (word in linesList[i]):
-                wordDict[word].append(i + 1)
+        linesList[i] = linesList[i].split(' ')
+        for o in range(len(linesList[i])):
+            for word in wordList:
+                word = word.lower()
+                if (word == linesList[i][o]):
+                    wordDict[word].append(i + 1)
     
     for word in wordList:
         print(word + " " + str(wordDict[word]))
