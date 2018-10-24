@@ -31,6 +31,7 @@ def testCraps(n):
     return amt / n
 
 def game(n):
+    '''Prints out a simple addition game and how many of its questions you get right'''
     num1 = random.randrange(0, 9)
     num2 = random.randrange(0, 9)
     ans = (num1 + num2)
